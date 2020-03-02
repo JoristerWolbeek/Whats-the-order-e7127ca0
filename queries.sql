@@ -24,21 +24,24 @@ SELECT * FROM series
 WHERE has_awards_won > 0;
 
 SELECT * FROM series
-WHERE rating >= 2.50;
+WHERE rating >= 2.50
+ORDER BY rating DESC;
 
 SELECT * FROM series
 WHERE language = "NL"
 AND country = "NL" ;
 
 SELECT * FROM series
-WHERE seasons  >= 5;
+WHERE seasons  >= 5
+ORDER BY seasons ASC;
 
 SELECT MAX(rating) AS HighestRating
 FROM series;
 
 SELECT * FROM series
 WHERE seasons  <= 3
-OR seasons >= 20;
+OR seasons >= 20
+ORDER BY country;
 
 SELECT * FROM series
 WHERE title LIKE '%th%';
